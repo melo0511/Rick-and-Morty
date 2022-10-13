@@ -90,3 +90,13 @@ function createCard(character) {
     text.appendChild(typeCharacter)
     text.appendChild(genderCharacter)
 }
+
+//Buscador
+
+const search = document.getElementById('search')
+
+search.addEventListener('keydown',find)
+
+function find(){
+    
+}
