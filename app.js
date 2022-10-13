@@ -1,22 +1,37 @@
 //Consumo de API
 
-window.addEventListener('DOMContentLoaded',a)
+window.addEventListener('DOMContentLoaded',()=>{
+    let URL = 'https://rickandmortyapi.com/api/character'
+    a(URL)
+})
 
-function a(){
-    fetch('https://rickandmortyapi.com/api/character')
+const main = document.getElementById('main')
+
+const search = document.getElementById('search', find)
+search.addEventListener('keyup',find)
+
+function find(event) {
+    let newURL = `https://rickandmortyapi.com/api/character/?name=${event.target.value}`
+    // console.log(newURL);
+    a(newURL)
+    main.innerHTML = " "
+}
+
+function a(data){
+    console.log(data);
+    fetch(data)
     .then(response=>response.json())
-    .then(response=>response.results.map(element => {
+    .then(response=> response.results.map(element => {
         // console.log(element);
         createCard(element)
+     
     }))
 }
 
 //Crear Card
 
-const main = document.getElementById('main')
-
 function createCard(character) {
-    
+   
     const {image,id,name,status,species,type,gender} = character
 
     const card = document.createElement('div')
@@ -97,14 +112,15 @@ function createCard(character) {
     text.appendChild(genderCharacter)
 }
 
-//Buscador
+// const search = document.getElementById('search', find)
+// const lupa = document.getElementById('lupa')
 
-const search = document.getElementById('search')
-const lupa = document.getElementById('lupa')
+// // search.addEventListener('keypress',find)
+// lupa.addEventListener('click',find)
 
-search.addEventListener('keydown',find)
-lupa.addEventListener('click',find)
-
-function find() {
-    results.map(element2 =>{element2.name === search.value ? createCard(character) : null})
-}
+// function find(event) {
+//     URL = `https://rickandmortyapi.com/api/character/?name=${search.value}`
+//     console.log(URL);
+//     a()
+//     // results.map(element2 =>{element2.name === search.value ? createCard(character) : null})
+// }

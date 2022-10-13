@@ -33,6 +33,12 @@ body{
     font-size: 4.2rem;
 }
 
+#titlePrincipal{
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 2.8rem;
+}
+
 #containerSearch{
     width: 100%;
     height: 10rem;
@@ -78,7 +84,6 @@ body{
     border-bottom: 2px solid black;
     border-right: 2px solid black;
     border-left: none;
-    cursor: pointer;
 }
 
 #lupa img{
@@ -147,10 +152,14 @@ body{
 
 .text h2{
     margin-left: 1rem;
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Gemunu Libre', sans-serif;
 }
 
 .text p{
     margin-left: 1rem;
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Gemunu Libre', sans-serif;
 }
 
 .imgLeft{
