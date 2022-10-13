@@ -4,7 +4,7 @@
 }
 
 *::-webkit-scrollbar{
-    width: 12px;
+    width: 10px;
     background: transparent;
 
 }
@@ -49,14 +49,14 @@ body{
 #search{
     width: 70%;
     height: 30%;
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     outline: none;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
 }
 
 #containerSearch2{
@@ -70,19 +70,20 @@ body{
 
 #lupa{
     width: 4%;
-    height: 32%;
+    height: 34%;
     background: #3d3d3f;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: none;
     cursor: pointer;
 }
 
 #lupa img{
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
 }
 
 #main{
@@ -99,13 +100,14 @@ body{
 .card{
     width: 45%;
     height: 35%;
-    background-color: white;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     margin: 1rem;
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .left{

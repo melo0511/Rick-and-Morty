@@ -1,11 +1,17 @@
-window.addEventListener('DOMContentLoaded',()=>{
-    fetch("https://rickandmortyapi.com/api/character")
+//Consumo de API
+
+window.addEventListener('DOMContentLoaded',a)
+
+function a(){
+    fetch('https://rickandmortyapi.com/api/character')
     .then(response=>response.json())
-    .then(response=>response.results.forEach(element => {
-        console.log(element);
+    .then(response=>response.results.map(element => {
+        // console.log(element);
         createCard(element)
     }))
-})
+}
+
+//Crear Card
 
 const main = document.getElementById('main')
 
@@ -94,9 +100,11 @@ function createCard(character) {
 //Buscador
 
 const search = document.getElementById('search')
+const lupa = document.getElementById('lupa')
 
 search.addEventListener('keydown',find)
+lupa.addEventListener('click',find)
 
-function find(){
-    
+function find() {
+    results.map(element2 =>{element2.name === search.value ? createCard(character) : null})
 }
