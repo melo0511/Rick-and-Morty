@@ -1,8 +1,6 @@
-//Consumo de API
-
 window.addEventListener('DOMContentLoaded',()=>{
     let URL = 'https://rickandmortyapi.com/api/character'
-    a(URL)
+    Api(URL)
 })
 
 const main = document.getElementById('main')
@@ -13,11 +11,13 @@ search.addEventListener('keyup',find)
 function find(event) {
     let newURL = `https://rickandmortyapi.com/api/character/?name=${event.target.value}`
     // console.log(newURL);
-    a(newURL)
+    Api(newURL)
     main.innerHTML = " "
 }
 
-function a(data){
+//Consumo de API
+
+function Api(data){
     console.log(data);
     fetch(data)
     .then(response=>response.json())
